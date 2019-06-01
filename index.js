@@ -13,22 +13,22 @@ function distanceFromHqInFeet(distance){
 
 function calculatesFarePrice(start, destination) {
     const distance = distanceTravelledInFeet(start, destination);
-    let cost;
+    let price;
   
     switch(true) {
       case (distance <= 400):
-        cost = 0
+        price = 0
         break;
       case (distance > 400 && distance <= 2000):
-        cost = ((distance - 400) * 0.02)
+        price = ((distance - 400) * 0.02)
         break;
       case (distance > 2000 && distance <= 2500):
-        cost = 25
+        price = 25
         break;
       default:
         return "cannot travel that far"
     }
   
-    return cost;
+    return price;
   }
   
